@@ -10,7 +10,7 @@
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" type="text/css" href="../assets/css/style.css?v=fd138992ff" />
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css?v=71e3a955ae" />
 
 	<link rel="canonical" href="http://localhost:2368/optimising-git-work-flow-with-functions-and-aliases/" />
     <meta name="referrer" content="origin" />
@@ -21,7 +21,7 @@
     <meta property="og:description" content="For this example I&#x27;m automating elements of work flow in publishing Ghost post updates to github pages. I&#x27;m utilising Buster to generate a static version of a ghost blog before pushing to github pages. Located in user home directory, the .bash_profile can have functions added to it to optimise" />
     <meta property="og:url" content="http://localhost:2368/optimising-git-work-flow-with-functions-and-aliases/" />
     <meta property="article:published_time" content="2016-07-18T14:39:10.850Z" />
-    <meta property="article:modified_time" content="2016-07-18T14:40:43.887Z" />
+    <meta property="article:modified_time" content="2016-07-19T08:51:10.947Z" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Optimising Git work flow with functions and aliases" />
     <meta name="twitter:description" content="For this example I&#x27;m automating elements of work flow in publishing Ghost post updates to github pages. I&#x27;m utilising Buster to generate a static version of a ghost blog before pushing to github pages. Located in user home directory, the .bash_profile can have functions added to it to optimise" />
@@ -48,7 +48,7 @@
     "headline": "Optimising Git work flow with functions and aliases",
     "url": "http://localhost:2368/optimising-git-work-flow-with-functions-and-aliases/",
     "datePublished": "2016-07-18T14:39:10.850Z",
-    "dateModified": "2016-07-18T14:40:43.887Z",
+    "dateModified": "2016-07-19T08:51:10.947Z",
     "description": "For this example I&#x27;m automating elements of work flow in publishing Ghost post updates to github pages. I&#x27;m utilising Buster to generate a static version of a ghost blog before pushing to github pages. Located in user home directory, the .bash_profile can have functions added to it to optimise"
 }
     </script>
@@ -119,12 +119,12 @@
 
 <p>Given the nature of building a static site with buster each time a new post is added, the git commits will more often than not reference an update to content. The commit message has been automated to reflect this and time of update has been added dynamically with <code>$(date)</code>.</p>
 
-<p>If any developmental work is to be completed commits can still be entered manually.</p>
-
 <p>To further optimise, an alias has been added. </p>
 
 <pre><code>alias gpg=gitpushghost  
 </code></pre>
+
+<p>Developmental work is tracked and committed separately before Buster integration.</p>
 
 <p>More here:</p>
 
@@ -177,7 +177,7 @@
 						<section class="post-nav-teaser">
 							<i class="ic ic-arrow-left"></i>
 							<h2 class="post-nav-title">Git lazy with more aliases</h2>
-							<p class="post-nav-excerpt">Added to ~/.gitconfig. [alias]         # one-line log 1         mylog = log --pretty=format:'%&hellip;</p>
+							<p class="post-nav-excerpt">Amending ~/.gitconfig file. [alias]         # one-line log 1         mylog = log --pretty=format:'%&hellip;</p>
 						</section>
 					</a>
 					<a class="post-nav-prev" href="../pretty-one-line-commits-in-git-2/index.html">
@@ -208,7 +208,7 @@
 		</footer>
 	</section>
 
-	<script type="text/javascript" src="../assets/js/script.js?v=fd138992ff"></script>
+	<script type="text/javascript" src="../assets/js/script.js?v=71e3a955ae"></script>
 
 	
 
