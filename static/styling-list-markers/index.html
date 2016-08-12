@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Styling list markers</title>
+	<meta name="description" content="" />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css?v=63b94fae87" />
+
+	<link rel="canonical" href="http://localhost:2368/styling-list-markers/" />
+    <meta name="referrer" content="origin" />
+    
+    <meta property="og:site_name" content="Notes to self" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Styling list markers" />
+    <meta property="og:description" content="If you&#x27;re looking to incorporate a numbered list in a site it&#x27;s likely you&#x27;ll be using an ordered list &amp;lt;ol&amp;gt; and it&#x27;s not unlikely you&#x27;ll be looking to style the numerals generated.  While not as straight forward as you might assume, it can be done. Roger Johansson&#x27;s tutorial" />
+    <meta property="og:url" content="http://localhost:2368/styling-list-markers/" />
+    <meta property="article:published_time" content="2016-07-01T13:04:49.000Z" />
+    <meta property="article:modified_time" content="2016-07-04T12:43:10.000Z" />
+    <meta property="article:tag" content="CSS3" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Styling list markers" />
+    <meta name="twitter:description" content="If you&#x27;re looking to incorporate a numbered list in a site it&#x27;s likely you&#x27;ll be using an ordered list &amp;lt;ol&amp;gt; and it&#x27;s not unlikely you&#x27;ll be looking to style the numerals generated.  While not as straight forward as you might assume, it can be done. Roger Johansson&#x27;s tutorial" />
+    <meta name="twitter:url" content="http://localhost:2368/styling-list-markers/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tom Williams" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="CSS3" />
+    <meta name="twitter:site" content="@TWilliamsUK" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Notes to self",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Tom Williams",
+        "url": "http://localhost:2368/author/tom/",
+        "sameAs": []
+    },
+    "headline": "Styling list markers",
+    "url": "http://localhost:2368/styling-list-markers/",
+    "datePublished": "2016-07-01T13:04:49.000Z",
+    "dateModified": "2016-07-04T12:43:10.000Z",
+    "keywords": "CSS3",
+    "description": "If you&#x27;re looking to incorporate a numbered list in a site it&#x27;s likely you&#x27;ll be using an ordered list &amp;lt;ol&amp;gt; and it&#x27;s not unlikely you&#x27;ll be looking to style the numerals generated.  While not as straight forward as you might assume, it can be done. Roger Johansson&#x27;s tutorial"
+}
+    </script>
+
+    <script type="text/javascript" src="../shared/ghost-url.js?v=63b94fae87"></script>
+<script type="text/javascript">
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "d6f542742820"
+});
+</script>
+    <meta name="generator" content="Ghost 0.8" />
+    <link rel="alternate" type="application/rss+xml" title="Notes to self" href="http://localhost:2368/rss/" />
+    <link href='https://fonts.googleapis.com/css?family=Cardo:400,400italic,700|Fira+Sans:400,500,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="post-template tag-css3">
+	
+	<nav id="menu">
+	<a class="close-button">Close</a>
+	<div class="nav-wrapper">
+		<p class="nav-label">Menu</p>
+		<ul>
+	            <li><a href="../tag/php/index.html">PHP</a></li>
+	            <li><a href="../tag/js/index.html">JS</a></li>
+	            <li><a href="../tag/css/index.html">CSS</a></li>
+	            <li><a href="../tag/css3/index.html">CSS3</a></li>
+	            <li><a href="../tag/html5/index.html">HTML5</a></li>
+	            <li><a href="../tag/typography/index.html">Typography</a></li>
+	            <li><a href="../tag/git/index.html">Git</a></li>
+	            <li><a href="../tag/inuit/index.html">Inuit</a></li>
+	            <li><a href="../tag/ui/index.html">UI</a></li>
+	            <li><a href="../tag/sketch/index.html">Sketch</a></li>
+	            <li><a href="../tag/sass/index.html">SASS</a></li>
+	            <li><a href="../tag/api/index.html">API</a></li>
+	            <li><a href="../tag/performance/index.html">Performance</a></li>
+	            <li><a href="../tag/html/index.html">HTML</a></li>
+	            <li><a href="../tag/accessibility/index.html">Accessibility</a></li>
+	            <li><a href="../tag/grunt/index.html">Grunt</a></li>
+	    </ul>
+	</div>
+</nav>
+	
+	<section id="wrapper">
+		<a class="hidden-close"></a>
+		
+
+<div class="progress-container">
+	<span class="progress-bar"></span>
+</div>
+
+<header id="post-header">
+	<div class="inner">
+		<nav id="navigation">
+			<span id="home-button" class="nav-button">
+				<a class="home-button" href="http://localhost:2368" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+			</span>
+			<span id="menu-button" class="nav-button">
+				<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+			</span>
+		</nav>
+		<h1 class="post-title">Styling list markers</h1>
+		<span class="post-meta"><a href="../author/tom/index.html">Tom Williams</a> | <time datetime="2016-07-01">01 Jul 2016</time></span>
+		
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="post tag-css3">
+		<div class="inner">
+		
+			<section class="post-content">
+				<p>If you're looking to incorporate a numbered list in a site it's likely you'll be using an ordered list <code>&lt;ol&gt;</code> and it's not unlikely you'll be looking to style the numerals generated. </p>
+
+<p>While not as straight forward as you might assume, it can be done.</p>
+
+<p><a href="http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/">Roger Johansson's tutorial</a> shows it can be done with the <code>&lt;:before&gt;</code> pseudo element, which can have a <code>&lt;counter&gt;</code> as a value to the <code>&lt;content&gt;</code> property.</p>
+
+<pre><code>ol {  
+    counter-reset: my-counter;
+    list-style-type: none;
+
+}
+ol li:before {  
+    content: counter(my-counter);
+    counter-increment: my-counter;
+}
+</code></pre>
+
+<p>Though feeling a little like a hack, it seems this may be the best solution for now. I believe browser support for targeting list markers with CSS3 is still lacking at time of writing.</p>
+
+<pre><code>/* No browser support at time of writing */
+
+li::marker {  
+  width: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+ol {  
+  list-style: symbols("*" "\2020" "\2021" "\A7"); 
+}
+
+ul {  
+  list-style-type: "★"; 
+}
+</code></pre>
+			</section>
+			
+			<section class="post-info">
+				
+				<div class="post-share">
+					<a class="twitter" href="https://twitter.com/share?text=Styling list markers&url=http://localhost:2368/styling-list-markers/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+						<i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+					</a>
+					<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/styling-list-markers/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+						<i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+					</a>
+					<a class="googleplus" href="https://plus.google.com/share?url=http://localhost:2368/styling-list-markers/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+						<i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+					</a>
+					<div class="clear"></div>
+				</div>
+				
+				<aside class="post-tags">
+					<a href="../tag/css3/index.html">CSS3</a>
+				</aside>
+				
+				<div class="clear"></div>
+				
+				<aside class="post-author">
+					<div class="post-author-bio">
+						<h4 class="post-author-name"><a href="../author/tom/index.html">Tom Williams</a></h4>
+					</div>
+					<div class="clear"></div>
+				</aside>
+
+			</section>
+			
+
+			<section class="post-comments">
+				<a id="show-disqus" class="post-comments-activate">Show Comments</a>
+			    <div id="disqus_thread"></div>
+
+			</section>
+
+			<aside class="post-nav">
+					<a class="post-nav-next" href="../footer-timestamps/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-left"></i>
+							<h2 class="post-nav-title">Footer timestamps</h2>
+							<p class="post-nav-excerpt">JS Refreshes browser side through user time setting using JavaScript Date Object.&hellip;</p>
+						</section>
+					</a>
+				<div class="clear"></div>
+			</aside>
+
+
+		</div>
+	</article>
+</main>
+
+
+		<div id="body-class" style="display: none;" class="post-template tag-css3"></div>
+	
+		<footer id="footer">
+			<div class="inner">
+				<section class="credits">
+					<span class="credits-theme">Theme <a href="https://github.com/zutrinken/attila">Attila</a> by <a href="http://zutrinken.com" rel="nofollow">zutrinken</a></span>
+					<span class="credits-software">Published with <a href="http://ghost.org">Ghost</a></span>
+				</section>
+			</div>
+		</footer>
+	</section>
+
+	<script type="text/javascript" src="../assets/js/script.js?v=63b94fae87"></script>
+
+	
+
+</body>
+</html>

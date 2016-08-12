@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Refactoring CSS with SASS</title>
+	<meta name="description" content="" />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css?v=63b94fae87" />
+
+	<link rel="canonical" href="http://localhost:2368/refactoring-css-with-sass/" />
+    <meta name="referrer" content="origin" />
+    
+    <meta property="og:site_name" content="Notes to self" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Refactoring CSS with SASS" />
+    <meta property="og:description" content="SASS is a CSS preprocessor that extends CSS.  A layer that sits between SASS and CSS  SASS compiles/translates SASS to CSS Install     Last login: Mon May 23 14:51:24 on ttys000     Thomass-MacBook-Air:~ thomaswilliams$ sass -v     -bash: sass: command not found     Thomass-MacBook-Air:~ thomaswilliams$ gem install sass     ERROR:  While executing" />
+    <meta property="og:url" content="http://localhost:2368/refactoring-css-with-sass/" />
+    <meta property="article:published_time" content="2016-07-01T17:26:43.000Z" />
+    <meta property="article:modified_time" content="2016-07-19T16:14:42.701Z" />
+    <meta property="article:tag" content="CSS" />
+    <meta property="article:tag" content="SASS" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Refactoring CSS with SASS" />
+    <meta name="twitter:description" content="SASS is a CSS preprocessor that extends CSS.  A layer that sits between SASS and CSS  SASS compiles/translates SASS to CSS Install     Last login: Mon May 23 14:51:24 on ttys000     Thomass-MacBook-Air:~ thomaswilliams$ sass -v     -bash: sass: command not found     Thomass-MacBook-Air:~ thomaswilliams$ gem install sass     ERROR:  While executing" />
+    <meta name="twitter:url" content="http://localhost:2368/refactoring-css-with-sass/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tom Williams" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="CSS, SASS" />
+    <meta name="twitter:site" content="@TWilliamsUK" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Notes to self",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Tom Williams",
+        "url": "http://localhost:2368/author/tom/",
+        "sameAs": []
+    },
+    "headline": "Refactoring CSS with SASS",
+    "url": "http://localhost:2368/refactoring-css-with-sass/",
+    "datePublished": "2016-07-01T17:26:43.000Z",
+    "dateModified": "2016-07-19T16:14:42.701Z",
+    "keywords": "CSS, SASS",
+    "description": "SASS is a CSS preprocessor that extends CSS.  A layer that sits between SASS and CSS  SASS compiles/translates SASS to CSS Install     Last login: Mon May 23 14:51:24 on ttys000     Thomass-MacBook-Air:~ thomaswilliams$ sass -v     -bash: sass: command not found     Thomass-MacBook-Air:~ thomaswilliams$ gem install sass     ERROR:  While executing"
+}
+    </script>
+
+    <script type="text/javascript" src="../shared/ghost-url.js?v=63b94fae87"></script>
+<script type="text/javascript">
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "d6f542742820"
+});
+</script>
+    <meta name="generator" content="Ghost 0.8" />
+    <link rel="alternate" type="application/rss+xml" title="Notes to self" href="http://localhost:2368/rss/" />
+    <link href='https://fonts.googleapis.com/css?family=Cardo:400,400italic,700|Fira+Sans:400,500,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="post-template tag-css tag-sass">
+	
+	<nav id="menu">
+	<a class="close-button">Close</a>
+	<div class="nav-wrapper">
+		<p class="nav-label">Menu</p>
+		<ul>
+	            <li><a href="../tag/php/index.html">PHP</a></li>
+	            <li><a href="../tag/js/index.html">JS</a></li>
+	            <li><a href="../tag/css/index.html">CSS</a></li>
+	            <li><a href="../tag/css3/index.html">CSS3</a></li>
+	            <li><a href="../tag/html5/index.html">HTML5</a></li>
+	            <li><a href="../tag/typography/index.html">Typography</a></li>
+	            <li><a href="../tag/git/index.html">Git</a></li>
+	            <li><a href="../tag/inuit/index.html">Inuit</a></li>
+	            <li><a href="../tag/ui/index.html">UI</a></li>
+	            <li><a href="../tag/sketch/index.html">Sketch</a></li>
+	            <li><a href="../tag/sass/index.html">SASS</a></li>
+	            <li><a href="../tag/api/index.html">API</a></li>
+	            <li><a href="../tag/performance/index.html">Performance</a></li>
+	            <li><a href="../tag/html/index.html">HTML</a></li>
+	            <li><a href="../tag/accessibility/index.html">Accessibility</a></li>
+	            <li><a href="../tag/grunt/index.html">Grunt</a></li>
+	    </ul>
+	</div>
+</nav>
+	
+	<section id="wrapper">
+		<a class="hidden-close"></a>
+		
+
+<div class="progress-container">
+	<span class="progress-bar"></span>
+</div>
+
+<header id="post-header">
+	<div class="inner">
+		<nav id="navigation">
+			<span id="home-button" class="nav-button">
+				<a class="home-button" href="http://localhost:2368" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+			</span>
+			<span id="menu-button" class="nav-button">
+				<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+			</span>
+		</nav>
+		<h1 class="post-title">Refactoring CSS with SASS</h1>
+		<span class="post-meta"><a href="../author/tom/index.html">Tom Williams</a> | <time datetime="2016-07-01">01 Jul 2016</time></span>
+		
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="post tag-css tag-sass featured">
+		<div class="inner">
+		
+			<section class="post-content">
+				<p>SASS is a CSS preprocessor that extends CSS. <br />
+A layer that sits between SASS and CSS <br />
+SASS compiles/translates SASS to CSS</p>
+
+<hr />
+
+<p><strong>Install</strong></p>
+
+<pre><code>    Last login: Mon May 23 14:51:24 on ttys000
+    Thomass-MacBook-Air:~ thomaswilliams$ sass -v
+    -bash: sass: command not found
+    Thomass-MacBook-Air:~ thomaswilliams$ gem install sass
+    ERROR:  While executing gem ... (Gem::FilePermissionError)
+        You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
+    Thomass-MacBook-Air:~ thomaswilliams$ sudo gem install sass
+    Password:
+    Fetching: sass-3.4.22.gem (100%)
+    Successfully installed sass-3.4.22
+    Parsing documentation for sass-3.4.22
+    Installing ri documentation for sass-3.4.22
+    1 gem installed
+    Thomass-MacBook-Air:~ thomaswilliams$ sass -v
+    Sass 3.4.22 (Selective Steve)
+    Thomass-MacBook-Air:~ thomaswilliams$ 
+</code></pre>
+
+<hr />
+
+<p><strong>Update</strong></p>
+
+<pre><code>        Thomass-MacBook-Air:~ thomaswilliams$ gem update sass
+        Updating installed gems
+        Nothing to update
+        Thomass-MacBook-Air:~ thomaswilliams$ 
+</code></pre>
+
+<hr />
+
+<p><strong>Watch Directory</strong></p>
+
+<pre><code>    Thomass-MacBook-Air:~ thomaswilliams$ cd desktop/project
+    Thomass-MacBook-Air:project thomaswilliams$ sass --watch scss:css
+    &gt;&gt;&gt; Sass is watching for changes. Press Ctrl-C to stop.
+    [Listen warning]:
+      Listen will be polling for changes. Learn more at https://github.com/guard/listen#polling-fallback.
+</code></pre>
+
+<p>To note:</p>
+
+<ul>
+<li><code>cd desktop/foldername</code> change directory</li>
+<li><code>sass --watch scss:css</code> to watch</li>
+<li><code>ctrl-c</code> to stop watching</li>
+</ul>
+
+<hr />
+
+<p><strong>REFACTORING</strong></p>
+
+<ol>
+<li><mark>Sections—Partials</mark> : Break related sections out into partials  </li>
+<li><mark>Patterns—Extends</mark> : Extract patterns into extends  </li>
+<li><mark>Nest Rules</mark> : Nest rules where it makes sense  </li>
+<li><mark>Values—variables</mark> : Variables for repetitive values  </li>
+<li><mark>Mixins</mark> : Convert repeating declaration groups into mixins</li>
+</ol>
+
+<hr />
+
+<p><strong>PIPING PARTIALS</strong></p>
+
+<p>Order that partials are piped effects cascade. <br />
+use sass <code>@import</code> to arrange partials</p>
+
+<pre><code>// Global Imports
+//----------------------------------------------------------
+
+@import 'base/index';
+@import 'layout/index';
+@import 'components/index';
+</code></pre>
+
+<hr />
+
+<p><strong>PLACEHOLDERS SELECTORS/EXTENDS</strong></p>
+
+<p>Extends are a smart solution for sharing styles.</p>
+
+<p>To access <code>Helper | Utility | Placeholder tool</code></p>
+
+<p>Great for refactoring with SASS but must be careful to avoid bloat. Eliminate needless specificity and long selector chains. Don't always nest styles in SASS as lots of nesting equals bloat. The main benefit is originally writing CSS without parent dependencies.</p>
+
+<p>One benefit of nesting:  </p>
+
+<pre><code>/* Pseudo-classes ------------------ */
+
+        a {
+          &amp;:link {
+            color: rgb(255, 169, 73);
+            text-decoration: none;
+          }
+
+          &amp;:visited {
+            color: lightblue;
+          }
+
+          &amp;:hover {
+            color: rgba(255, 169, 73, .4);
+          }
+        }
+</code></pre>
+
+<p>Related selectors nicely organised under 1 rule where possible using parent selector to append suffix to a selector. </p>
+
+<p>This is especially useful when working with name spaced class selectors for instance:</p>
+
+<pre><code>.main-heading {}
+.main-title {}
+</code></pre>
+
+<p>Becomes</p>
+
+<pre><code>.main {
+  &amp;-heading {}
+  &amp;-title {}
+}
+</code></pre>
+
+<hr />
+
+<p><strong>VARIABLES</strong></p>
+
+<pre><code>// Descriptive color variables
+
+$white             : #fff;
+$black             : #000;
+$grey              : #878787;
+$regent-st-blue    : #add8e6;
+$river-bed         : #48525c;
+$yellow-orange     : #ffa949;
+
+// Functional color variables
+
+$color-border-light : lighten($grey, 35%);
+$color-border-dark  : $yellow-orange;
+
+$color-link-default : $yellow-orange;
+$color-link-visited : $regent-st-blue;
+
+$color-shadow       : rgba($black,.8);
+$color-body         : $white;
+
+// Font stacks
+
+$stack-sans-serif  : Helvetica, Arial, sans-serif;
+$stack-helvetica   : "Helvetica Neue", $stack-sans-serif;
+$stack-abolition   : 'Abolition Regular', $stack-helvetica;
+
+//Border Radius
+
+$br                : 10px;
+
+//Asset paths
+
+$path-img          : '../img';
+// use #{$path-img} to pass
+</code></pre>
+
+<p>We can speed up using 'find change' to swap out all colour variables.</p>
+
+<hr />
+
+<p><strong>MIXINS</strong></p>
+
+<p>instead of re-writing common code we can write once in a mixin and let sass generate them dynamically.</p>
+
+<p>Great thing is we can reuse in other projects.</p>
+
+<p>Write mixins that make use of arguments to dynamically alter css values. Instead of ones that just repeat blocks of code, which could cause extra and unecessary bloat in output.</p>
+
+<pre><code>// Web fonts
+
+@mixin font-face($family, $file) {
+    @font-face {
+      font-family: $family;
+      src: url('#{$path-font}/#{$file}-webfont.eot');
+      src: url('#{$path-font}/#{$file}-webfont.eot?#iefix') format('embedded-opentype'),
+           url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
+           url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
+    }
+}
+
+// Text
+
+@mixin text($size: null, $l-height: null, $weight: null, £color: null) {
+    font-size: $size;
+    line-height: $l-height;
+    font-weight: $weight;
+    color: $color;
+}
+</code></pre>
+
+<p>always include mixins first when declaring within other partials to ensure correct cascade through styles.</p>
+
+<hr />
+
+<p><strong>MEDIA QUERIES</strong></p>
+
+<p>define media queries by nesting inside rules keeping local to their component.</p>
+
+<p>preferable to distribute to respective rules.</p>
+
+<p>eg. Building powerful conditional media query mixins.</p>
+
+<hr />
+
+<ul>
+<li>VARIABLES</li>
+<li>MIXINS</li>
+<li>EXTENDS</li>
+<li>FUNCTIONS</li>
+<li>INTERPOLATION</li>
+</ul>
+			</section>
+			
+			<section class="post-info">
+				
+				<div class="post-share">
+					<a class="twitter" href="https://twitter.com/share?text=Refactoring CSS with SASS&url=http://localhost:2368/refactoring-css-with-sass/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+						<i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+					</a>
+					<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/refactoring-css-with-sass/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+						<i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+					</a>
+					<a class="googleplus" href="https://plus.google.com/share?url=http://localhost:2368/refactoring-css-with-sass/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+						<i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+					</a>
+					<div class="clear"></div>
+				</div>
+				
+				<aside class="post-tags">
+					<a href="../tag/css/index.html">CSS</a> <a href="../tag/sass/index.html">SASS</a>
+				</aside>
+				
+				<div class="clear"></div>
+				
+				<aside class="post-author">
+					<div class="post-author-bio">
+						<h4 class="post-author-name"><a href="../author/tom/index.html">Tom Williams</a></h4>
+					</div>
+					<div class="clear"></div>
+				</aside>
+
+			</section>
+			
+
+			<section class="post-comments">
+				<a id="show-disqus" class="post-comments-activate">Show Comments</a>
+			    <div id="disqus_thread"></div>
+
+			</section>
+
+			<aside class="post-nav">
+					<a class="post-nav-next" href="../getting-started-with-git/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-left"></i>
+							<h2 class="post-nav-title">Getting started with Git</h2>
+							<p class="post-nav-excerpt">Let's begin git init — creates repository. git init newproject — creates and names&hellip;</p>
+						</section>
+					</a>
+					<a class="post-nav-prev" href="../before-after-pseudo-elements/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-right"></i>
+							<h2 class="post-nav-title">:before &amp; :after pseudo elements</h2>
+							<p class="post-nav-excerpt">Benefit of dynamically inserting supporting non structural objects without needlessly disrupting or&hellip;</p>
+						</section>
+					</a>
+				<div class="clear"></div>
+			</aside>
+
+
+		</div>
+	</article>
+</main>
+
+
+		<div id="body-class" style="display: none;" class="post-template tag-css tag-sass"></div>
+	
+		<footer id="footer">
+			<div class="inner">
+				<section class="credits">
+					<span class="credits-theme">Theme <a href="https://github.com/zutrinken/attila">Attila</a> by <a href="http://zutrinken.com" rel="nofollow">zutrinken</a></span>
+					<span class="credits-software">Published with <a href="http://ghost.org">Ghost</a></span>
+				</section>
+			</div>
+		</footer>
+	</section>
+
+	<script type="text/javascript" src="../assets/js/script.js?v=63b94fae87"></script>
+
+	
+
+</body>
+</html>
